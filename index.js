@@ -42,5 +42,5 @@ app.get('/project', function(req, res) {
     res.render('pages/project');
 });
 
-app.listen(8080);
+app.listen(process.env.PORT || 3000);
 console.log('8080 is the magic port');
