@@ -9,8 +9,9 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "empty"
-  },
+    "start": "node index.js"
+},
+ "heroku-run-build-script": true,
   "repository": {
     "type": "git",
     "url": "empty"
