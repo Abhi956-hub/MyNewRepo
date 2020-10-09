@@ -14,9 +14,9 @@ app.use('/fonts', express.static(__dirname + 'public/fonts'))
 // use res.render to load up an ejs view file
 
 // index page
-// app.get('/', function(req, res) {
-//     res.render('pages/index');
-// });
+ app.get('/', function(req, res) {
+    res.render('pages/home');
+ });
 
 app.get('/home', function(req, res) {
     res.render('pages/home');
