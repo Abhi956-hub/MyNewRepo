@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+    <%- include('../partials/header'); %>
+</header>
+
+<main>
+    <section class="site-section" id="section-about">
+        <div class="container">
+            <div class="row mb-5 align-items-center">
+              
+                <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">contact_name</th>
+                        <th scope="col">contact_number</th>
+                        <th scope="col">email_address</th>
+                        <th scope="col">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <% businesslists.forEach(function(business){ %>
+                        <tr>
+                          <th scope="row">1</th>
+                          <td><%- business.contact_name %></td>
+                          <td><%- business.contact_number %></td>
+                          <td><%- business.email_address %></td>
+                          <td>
+                            <a href="/businesslist/<%- business._id %>">Edit</a>
+                            <a href="/businesslist/delete/<%- business._id %>">Delete</a>
+                          </td>
+                        </tr>
+                      <% }); %>
+                    </tbody>
+                  </table>
+                 
+            </div>
+        </div>
+    </section>
+</main>
+<link rel="stylesheet" href="css/button.css">
+<footer>
+    <%- include('../partials/footer'); %>
+</footer>
+</body>
+</html>
