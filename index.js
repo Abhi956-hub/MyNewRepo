@@ -113,7 +113,7 @@ app.post('/businesslist/:id', async function (req, res) {
         const business = await BusinesslistModel.findOne({ _id: id })
         business.contact_name = req.body.contact_name;
         business.contact_number = req.body.contact_number;
-        business.email_adddress = req.body.email_adddress;
+        business.email_address = req.body.email_address;
         // console.log(req.contact_name);
         await business.save()
 
